@@ -1,0 +1,207 @@
+:root 
+{
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --blue-main: hsl(217, 54%, 11%);
+    --blue-card: hsl(216, 50%, 16%);
+    --blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, ::before, ::after
+{
+  box-sizing: border-box;
+}
+
+body
+{
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--blue-main);
+    padding: 3rem .6rem 1rem; 
+}
+
+figure
+{
+  margin: 0;
+}
+
+.nft-card
+{
+  max-width: 230px;
+  max-height: 400px;
+  background-color: var(--blue-card);
+  border-radius: 2%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.icon-cube
+{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 2%;
+  position: relative;
+  opacity:0.8;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  background-color: transparent;
+}
+
+.icon-view
+{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nft-card .icon-cube:hover 
+{
+  opacity: .3;
+  filter: brightness(70%) saturate(130%);
+  cursor: pointer;
+}
+
+.icon-cube:hover + .icon-view
+{
+  opacity: .5;
+}
+
+.hidden
+{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+h1
+{
+  font-size: .8rem;
+  color: var(--white);
+}
+
+.sentence
+{
+  font-size: .7rem;
+  color: var(--blue);
+}
+
+.flex-items
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ethereum-number
+{
+  display: flex;
+}
+
+.ethereum-number img
+{
+  width: 9px;
+  height: 12px;
+}
+
+.time
+{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.time img
+{
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.eth-text
+{
+  color: var(--cyan);
+  font-size: .7rem;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 0;
+  margin: 0 5px;
+}
+
+.time-text
+{
+  color: var(--blue);
+  font-size: .7rem;
+  padding: 5px;
+  padding-left: 0;
+  margin: 0 5px;
+}
+
+.author
+{
+  display: flex;
+}
+
+.border
+{
+  border: 0.01rem solid var(--blue);
+  margin-top: .8rem;
+  margin-bottom: .8rem;
+}
+
+.avatar
+{
+  width: 1.6rem;
+  height: 1.6rem;
+  border: .5px solid var(--white);
+  border-radius: 50%;
+}
+
+address
+{
+  color: var(--blue);
+  font-size: .7rem;
+  font-weight: bold;
+  font-style: normal;
+  margin: 4px 13px;
+}
+
+address p 
+{
+  margin: 0;
+  padding: .2rem;
+}
+
+address span
+{
+  color: var(--white);
+}
+
+h1:hover,
+address span:hover
+{
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.attribution 
+    { 
+      font-size: 10px; 
+      text-align: center; 
+      font-variant: small-caps;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 3px;
+    }
+
+.attribution a
+{ 
+  color: hsl(228, 45%, 44%); 
+}
