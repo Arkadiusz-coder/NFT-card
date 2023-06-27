@@ -147,12 +147,11 @@ h1
   display: flex;
 }
 
-.border
+hr
 {
-  border: 0.01rem solid var(--blue);
-  margin-top: .8rem;
-  margin-bottom: .8rem;
+    color var(--blue);
 }
+    
 
 .avatar
 {
